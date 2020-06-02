@@ -2,11 +2,15 @@ import React, { Component } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components.css'
+import axios from 'axios'
 
 export class MovieCarousel extends Component {
   render() {
     return (
       <div className="container">
+        <br/>
+        <br/>
+        <br/>
         <Carousel>
           <Carousel.Item>
             <img
@@ -22,7 +26,7 @@ export class MovieCarousel extends Component {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="https://blisssaigon.com/wp-content/uploads/2018/08/Feature-Inception.jpeg"
+              src="..."
               alt="Second slide"
              />
              <Carousel.Caption>

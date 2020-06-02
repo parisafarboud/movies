@@ -1,23 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component , useEffect , useState } from 'react';
 import './App.css';
 import MovieCarousel from './Components/MovieCarousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header';
 import MovieCards from './Components/MovieCards';
+import Details from './Components/Details'
 
-export class App extends Component {
+
+
+// api key => 3cbec692df5e8871601749cff450ce6c
+export class App extends React.Component {
+
   render() {
     return (
       <div>
         <Header/>
-        <br/>
-        <br/>
-        <br/>
         <MovieCarousel/>
-        <MovieCards/>
+        <MovieCards/> 
+        <Details/>
       </div>
     )
   }
 }
 
 export default App
+
+
+
+
