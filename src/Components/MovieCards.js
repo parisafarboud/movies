@@ -1,6 +1,11 @@
-import {Card, CardDeck , CardGroup, Col, CardColumns, Row, Container} from 'react-bootstrap'
-import React, { Component, useEffect , useState  } from 'react'
+import {Card, Row, Container} from 'react-bootstrap'
+import React, { useEffect , useState  } from 'react'
 import axios from 'axios'
+import './components.css'
+import {Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Details from './Details' 
+import App from '../App'   
+
 
 export default function MovieCards() {
 
@@ -34,7 +39,13 @@ export default function MovieCards() {
       style={{ margin : "10px" }}
       >
       <Card.Body>
-        <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500'+data.poster_path} style={{height:"200px"}}/>
+      
+        <Card.Img
+         variant="top" 
+         src={'https://image.tmdb.org/t/p/w500'+data.poster_path} 
+         style={{height:"200px"}}
+         
+         />
     <Card.Title>{data.title}</Card.Title>
         </Card.Body>
       </Card>
@@ -63,9 +74,12 @@ export default function MovieCards() {
         return (
             <div className="container">   
            
+           
                 <hr/>
                 <h3>Popular Movies</h3>
-                <hr/>
+
+
+
 
                 <Container>
                   <Row xs={2} md={4} lg={6}>

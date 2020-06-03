@@ -1,8 +1,7 @@
 // header => name of the site 
 // searchbar
 import React, { Component } from 'react'
-// import Navbar from 'react-bootstrap/Navbar'
-import { Button, Navbar, Nav, NavDropdown, MenuItem, Form, FormControl } from 'react-bootstrap';
+import { Button, Navbar, Nav, Form, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export class Header extends Component {
