@@ -23,27 +23,3 @@ export class App extends React.Component {
 }
 
 export default App
-
-// import React from 'react'
-
-// export default function App() {
-
-//   const [latest,setLatest]=useState("")
-//   useEffect(() => {
-//       axios.get('https://api.themoviedb.org/3/movie/latest?api_key=3cbec692df5e8871601749cff450ce6c&language=en-US')
-//       .then(res => {
-//           setLatest(res.data)
-//           console.log(res.data)
-//       })
-//       .catch(err => {
-//           console.log(err)
-//       });
-//   }, []);
-//   return (
-//     <div>
-//       <h3>{latest.title}</h3>
-//     </div>
-//   )
-// }
-
-

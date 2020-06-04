@@ -1,0 +1,19 @@
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image:rgba(0,0,0,0.8);
+    
+}
+a:hover{
+    color: teal;  
+}
+a:visited{
+    color: teal;
+}
+a{
+    color: teal;
+}
+strong{
+    color: teal;
+}
