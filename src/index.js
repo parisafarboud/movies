@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import App from './App'
 import Details from './Components/Details'
+import SearchResults from './Components/SearchResults'
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
        <Switch>
         <Route exact path="/" component={App} />
         <Route path={"/Details/:id"}><Details /></Route>
+        <Route path={"/Search/:name"}><SearchResults/></Route>
       </Switch>
       </BrowserRouter>,
       rootElement

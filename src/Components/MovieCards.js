@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 export default function MovieCards() {
 
-  const [movieId, setMovieId] = useState('');
   const [popular, setPopular] = useState([])
   const [top_rated, setTop_Rated] = useState([])
 
@@ -34,7 +33,6 @@ export default function MovieCards() {
         text="dark"
         className="text-center"
         style={{ margin: "10px" }}
-        onClick={() => setMovieId(data.id)}
       >
         <Card.Body>
           <Link to={{ pathname: "/Details/" + data.id }} >
@@ -81,13 +79,14 @@ export default function MovieCards() {
 
 
       <Container>
-        <Row xs={2} md={4} lg={6}>
+        <Row xs={2} md={4} lg={6} >
           {names}
         </Row>
       </Container>
 
       <hr />
-      <h3>Top Rated Movies</h3>
+      <a id="cinema">
+      <h3>Top Rated Movies</h3></a>
       <hr />
       <Container>
         <Row xs={2} md={4} lg={6}>

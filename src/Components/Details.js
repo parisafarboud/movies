@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Header from './Header'
-import { Card, Row, Container, Col } from 'react-bootstrap'
+import { Row, Container, Col } from 'react-bootstrap'
 import './details.css'
 
 function Details() {
@@ -34,19 +34,30 @@ function Details() {
                         <img src={'https://image.tmdb.org/t/p/w500' + detail.poster_path} />
                     </Col>
                     <Col lg={8}>
-                        <h2>{detail.title}</h2>
-                        <h6>{detail.tagline}</h6>
-                        <p>
-                            <strong>Release Date</strong><br />
-                            {detail.release_date}<br />
-                            <strong>Language</strong><br />
-                            {detail.original_language}<br />
-                            <strong>Rate</strong><br />
-                            {detail.vote_average}<br />
-                            <strong>Overview</strong><br />
-                            {detail.overview} <br /> <br />
+                        <h2 style={{ fontFamily: 'fantasy' }}>{detail.title}</h2>
+                        <h6 style={{ fontFamily: 'fantasy', color: 'teal' }}>{detail.tagline}</h6>
+                        <p style={{ fontFamily: "Georgia, 'Times New Roman', Times, serif" }}>
+                            {detail.overview} <br /><br />
+                            <Row>
+                                <Col>
+                                    <strong>Release Date</strong><br />
+                                    {detail.release_date}<br />
+                                    <strong>Language</strong><br />
+                                    {detail.original_language}<br />
+                                </Col>
+                                <Col>
+                                    <strong>Rate</strong><br />
+                                    {detail.vote_average}/10<br />
+                                    <strong>Running time</strong> <br/>
+                                    {detail.runtime} minutes
+                                </Col>
 
+                            </Row>
+                            <br />
                             <p style={{ color: 'red' }}> More on: <a href={detail.homepage} target='blank'>Original Website</a></p>
+                            Images: <br/>
+                            <img src={'https://image.tmdb.org/t/p/w500' + detail.backdrop_path} style={{height:"170px"}}/>
+                            
                         </p>
                     </Col>
                 </Row>
