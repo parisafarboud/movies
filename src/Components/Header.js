@@ -7,15 +7,15 @@ import {Link} from 'react-router-dom'
 export default function Header() {
 
     const [searchName, setSearchName]=useState("");
-    const [search,setSearch]=useState("")
     return (
         <div>
         <Navbar bg="dark" variant="dark" fixed="top">
             <Navbar.Brand href="/">Movies</Navbar.Brand>
             <Nav>
-                <Link to='/'><Nav.Link href='#home'>Home</Nav.Link></Link>
-                <Nav.Link href='#TV'>TV Shows</Nav.Link>
-                <Nav.Link href='#cinema'>Cinema</Nav.Link>
+                <Nav.Link href='/'>Home</Nav.Link>
+                <Nav.Link href='#popular'>Popular</Nav.Link>
+                <Nav.Link href='#topRated'>Top Rated</Nav.Link>
+                <Nav.Link href='/About'>About</Nav.Link>
             </Nav>
             <Form inline >
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" style={{width:'500px'}} onChange={e => setSearchName(e.target.value)}/>
@@ -26,30 +26,3 @@ export default function Header() {
     )
 }
 
-
-
-// export class Header extends Component {
-
-
-
-//     render() {
-//         return (
-            // <div>
-            //     <Navbar bg="dark" variant="dark" fixed="top">
-            //         <Navbar.Brand href="/">Movies</Navbar.Brand>
-            //         <Nav>
-            //             <Link to='/'><Nav.Link href='#home'>Home</Nav.Link></Link>
-            //             <Nav.Link href='#TV'>TV Shows</Nav.Link>
-            //             <Nav.Link href='#cinema'>Cinema</Nav.Link>
-            //         </Nav>
-            //         <Form inline >
-            //             <FormControl type="text" placeholder="Search" className="mr-sm-2" style={{width:'500px'}} onChange={this.props.onInputChange}/>
-            //             <Button variant="outline-info">Search</Button>
-            //         </Form>
-            //     </Navbar>
-            // </div>
-//         )
-//     }
-// }
-
-// export default Header

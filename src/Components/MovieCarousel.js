@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components.css'
 import axios from 'axios'
+import { Link } from "react-router-dom";
 
 export default function App() {
 
@@ -26,14 +27,16 @@ export default function App() {
 
   const now_playing = now.map((data, id) => {
     return (
-      <Carousel.Item key={id}>
+
+      
+      <Carousel.Item key={id}><Link to={{ pathname: "/Details/" + data.id }} >
         <img
           className="d-block w-100"
           src={'https://image.tmdb.org/t/p/w500' + data.backdrop_path}
           alt={data.title}
           style={{ width: '600px' }}
-        />
-        <Carousel.Caption>
+        /></Link>
+        <Carousel.Caption style={{color:'white', backgroundColor:'rgba(0,0,0,0.6)'}}>
           <h3>{data.title}</h3>
         </Carousel.Caption>
       </Carousel.Item>
@@ -44,8 +47,8 @@ export default function App() {
       <br />
       <br />
       <br />
-
-      <Carousel>{now_playing}</Carousel>
+      <a id='home'>
+      <Carousel>{now_playing}</Carousel></a>
     </div>
   )
 }

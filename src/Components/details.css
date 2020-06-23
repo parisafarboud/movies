@@ -13,8 +13,17 @@ a:visited{
 }
 a{
     color: teal;
+    
 }
 strong{
     color: teal;
     font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+#about{
+    background-image: url('./logo512.png');
+    background-position: center;
+    background-size:500px;
+    background-repeat: no-repeat;
+
 }

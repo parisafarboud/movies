@@ -7,19 +7,17 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import App from './App'
 import Details from './Components/Details'
 import SearchResults from './Components/SearchResults'
+import About from './Components/About'
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
-  // document.getElementById('root')
 
   <BrowserRouter>
        <Switch>
         <Route exact path="/" component={App} />
         <Route path={"/Details/:id"}><Details /></Route>
         <Route path={"/Search/:name"}><SearchResults/></Route>
+        <Route path={"/About"}><About/></Route>
       </Switch>
       </BrowserRouter>,
       rootElement

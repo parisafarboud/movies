@@ -61,10 +61,10 @@ export default function MovieCards() {
         <Card.Body>
           <Link to={{ pathname: "/Details/" + data.id }} >
             <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500' + data.poster_path} style={{ height: "200px" }} />
-            </Link>
-            <Card.Title>{data.title}</Card.Title>
-            <small className="text-muted">Rate: {data.vote_average}</small>
-          
+          </Link>
+          <Card.Title>{data.title}</Card.Title>
+          <small className="text-muted">Rate: {data.vote_average}</small>
+
         </Card.Body>
       </Card>
 
@@ -73,10 +73,12 @@ export default function MovieCards() {
 
 
   return (
-    <div className="container">
+    <div className="container" style={{ fontFamily: "Georgia, 'Times New Roman', Times, serif" }}>
       <hr />
-      <h3>Popular Movies</h3>
-
+      <a id='popular'>
+        <h2>Popular Movies</h2>
+      </a>
+      <hr/>
 
       <Container>
         <Row xs={2} md={4} lg={6} >
@@ -85,8 +87,8 @@ export default function MovieCards() {
       </Container>
 
       <hr />
-      <a id="cinema">
-      <h3>Top Rated Movies</h3></a>
+      <a id="topRated"></a>
+        <h2>Top Rated Movies</h2>
       <hr />
       <Container>
         <Row xs={2} md={4} lg={6}>

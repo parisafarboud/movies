@@ -56,8 +56,7 @@ function Details() {
                                 <Col>
                                     <strong>Rate</strong><br />
                                     {detail.vote_average}/10<br />
-                                    <strong>Running time</strong> <br />
-                                    {detail.runtime} minutes
+
                                 </Col>
 
                             </Row>
